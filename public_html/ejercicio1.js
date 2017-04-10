@@ -28,3 +28,12 @@ function  cerrarNueva()
 }
 
 
+var num = new Number(54.1234);
+document.write(num.toPrecision(3)+ "<br/>");
+document.write(num.toFixed(1) + "<br/>");
+document.write(num.toString(2) + "<br/>");
+document.write(num.toString(8) + "<br/>");
+document.write(num.toString(16) + "<br/>");
+document.write(Number.MIN_VALUE);
+document.write(Number.MAX_VALUE);
+
