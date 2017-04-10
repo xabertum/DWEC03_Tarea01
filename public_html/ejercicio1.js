@@ -26,3 +26,10 @@ function  cerrarNueva()
         nuevaVentana = null;
     }
 }
+
+
+document.write(Math.cos(3) + "<br />");
+document.write(Math.asin(0) + "<br />"); 
+document.write(Math.max(0,150,30,20,38) + "<br />"); 
+document.write(Math.pow(7,2) + "<br />"); 
+document.write(Math.round(0.49) + "<br />");
