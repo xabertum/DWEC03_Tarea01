@@ -8,16 +8,17 @@
 document.title = "Hola";
 
 
-var lista = [];
-var lista2 = new Array();
-
-
 var lista3 = new Array ("ganzúa", "tetera", "almibar");
-var lista = ["tetera", "amor"];
 
 
 lista.forEach(function(i) {
    document.write(i); 
 });
+
+lista3.create();
+var b = isEmpty(lista3);
+
+
+
 
 
