@@ -8,6 +8,10 @@
         <p id="isFull"></p>
         <p id="size"></p>
         <p id="size2"></p>
+        <p id="addAt"></p>
+        <p id="get"></p>
+        
+        
         <script src = "ejercicio1.js"></script>
         <script>
             var miLista = create(4);
@@ -17,6 +21,9 @@
             
             add(miLista,4);
             document.getElementById("size2").innerHTML = "despues de anadir, resultado de size(): " + size(miLista);
+            document.getElementById("get").innerHTML = "el elemento 3, resultado de get(): " + get(miLista,3);
+                       
+            toString(miLista);
         </script>
 
     </body>
