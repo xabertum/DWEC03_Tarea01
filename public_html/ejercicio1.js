@@ -76,9 +76,8 @@ function indexOf(lista, elemento) {
 }
 
 function lastIndexOf(lista, elemento) {
-
     var index;
-    for (var i = lista.length; i > 0; i--) {
+    for (var i = lista.length + 1; i >= 0; i--) {
 
         if (lista[i] === elemento)
             index = i;
@@ -89,3 +88,45 @@ function lastIndexOf(lista, elemento) {
     return index;
 
 }
+
+function capacity(lista) {
+
+    return NUMMAXELEMENTOS;
+
+
+}
+
+function clear(lista) {
+
+    lista = [];
+
+}
+
+function firstElement(lista) {
+
+    return lista[0];
+
+}
+
+function lastElement(lista) {
+
+    return lista[lista.length];
+
+}
+
+function remove(lista, index) {
+    var elemento;
+    for (var i = 0; i < lista.length; i++) {
+
+        if (i == index)
+            lista[i] = elemento;
+        lista[i] = [];
+    }
+
+    return elemento;
+
+}
+
+
+
+
