@@ -7,35 +7,24 @@
 
 document.title = "Hola";
 
-
-function inicializar() {
-
-    var listaObjeto = new array();
-    var lista = ["ganzúa ", "tetera ", "almibar "];
+NUMMAXELEMENTOS = 0;
 
 
-    lista.forEach(function (i) {
-        document.write(i);
+function create(numMaxElementos) {
 
-    });
-
-    function create(numMaxElementos) {
-
-        var lista = new Array[numMaxElementos];
-        return lista;
-
-    }
-
-
-    function isEmpty(lista) {
-
-        return (lista.length == 0);
-
-    }
-
-
+    NUMMAXELEMENTOS = numMaxElementos;
+    var lista = new Array();
+    return lista;
 
 }
+
+
+function isEmpty(lista) {
+
+    return (lista.length == 0);
+
+}
+
 
 
 
