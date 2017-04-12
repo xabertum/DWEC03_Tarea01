@@ -12,7 +12,7 @@ NUMMAXELEMENTOS = 0;
 function create(numMaxElementos) {
 
     NUMMAXELEMENTOS = numMaxElementos;
-    var lista = new Array();
+    var lista = new Array(numMaxElementos);
     return lista;
 }
 
@@ -58,15 +58,13 @@ function get(lista, index) {
 
 function toString(lista) {
 
-    document.write(lista);
+    return lista;
 
 }
 
 function indexOf(lista, elemento) {
-
     var index;
-
-    for (var i = 0; lista.length; i++) {
+    for (var i = 0; i < lista.length; i++) {
 
         if (lista[i] === elemento)
             index = i;
@@ -75,4 +73,19 @@ function indexOf(lista, elemento) {
     }
 
     return index;
+}
+
+function lastIndexOf(lista, elemento) {
+
+    var index;
+    for (var i = lista.length; i > 0; i--) {
+
+        if (lista[i] === elemento)
+            index = i;
+        else
+            index = -1;
+    }
+
+    return index;
+
 }
