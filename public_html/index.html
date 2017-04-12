@@ -7,13 +7,16 @@
         <p id="demo"></p>
         <p id="isFull"></p>
         <p id="size"></p>
-
+        <p id="size2"></p>
         <script src = "ejercicio1.js"></script>
         <script>
             var miLista = create(4);
             document.getElementById("demo").innerHTML = "resultado de isEmpty(): " + isEmpty(miLista);
             document.getElementById("isFull").innerHTML = "resultado de isFull(): " + isFull(miLista);
             document.getElementById("size").innerHTML = "resultado de size(): " + size(miLista);
+            
+            add(miLista,4);
+            document.getElementById("size2").innerHTML = "despues de anadir, resultado de size(): " + size(miLista);
         </script>
 
     </body>
