@@ -8,15 +8,35 @@
 document.title = "Hola";
 
 
-var lista3 = new Array ("ganzúa", "tetera", "almibar");
+function inicializar() {
+
+    var listaObjeto = new array();
+    var lista = ["ganzúa ", "tetera ", "almibar "];
 
 
-lista.forEach(function(i) {
-   document.write(i); 
-});
+    lista.forEach(function (i) {
+        document.write(i);
 
-lista3.create();
-var b = isEmpty(lista3);
+    });
+
+    function create(numMaxElementos) {
+
+        var lista = new Array[numMaxElementos];
+        return lista;
+
+    }
+
+
+    function isEmpty(lista) {
+
+        return (lista.length == 0);
+
+    }
+
+
+
+}
+
 
 
 
