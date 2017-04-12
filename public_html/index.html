@@ -1,22 +1,20 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="ejercicio1.js"></script>
-    </head>
-    <body onLoad="inicializar()">
-        <h1>Abrimos y cerramos ventanas</h1>
-        <form>
-            <p> <input  type="button"  id="crear-ventana"  value="Crear Nueva Ventana">
-                <input  type="button"  id="cerrar-ventana"  value="Cerrar Nueva Ventana"> </p>
+    <body>
 
-            <p><input type="date"></p>
-        </form>
+        <h1>JavaScript Objects</h1>
+        <p>JavaScript uses names to access object properties.</p>
+        <p id="demo"></p>
+        <p id="isFull"></p>
+        <p id="size"></p>
+
+        <script src = "ejercicio1.js"></script>
+        <script>
+            var miLista = create(4);
+            document.getElementById("demo").innerHTML = "resultado de isEmpty(): " + isEmpty(miLista);
+            document.getElementById("isFull").innerHTML = "resultado de isFull(): " + isFull(miLista);
+            document.getElementById("size").innerHTML = "resultado de size(): " + size(miLista);
+        </script>
+
+    </body>
 </html>
