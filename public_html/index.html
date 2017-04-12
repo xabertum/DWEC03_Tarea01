@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+     <head>
+        <meta charset="UTF-8">
+    </head>
     <body>
 
         <h1>JavaScript Objects</h1>
@@ -19,11 +22,13 @@
             document.getElementById("demo").innerHTML = "resultado de isEmpty (): " + isEmpty(miLista);
             document.getElementById("isFull").innerHTML = "resultado de isFull (): " + isFull(miLista);
             document.getElementById("size").innerHTML = "resultado de size (): " + size(miLista);
+            document.getElementById("add").innerHTML = "add() - elemento anadido: " + add(miLista,4);
+            document.getElementById("add").innerHTML = "size() - despues de anadir elemento: " + size(miLista);
             
-            document.getElementById("add").innerHTML = "elemento anadido: " + add(miLista,4);
-            document.getElementById("add").innerHTML = "despues de anadir sizeOf (): " + size(miLista);
+            document.getElementById("addAt").innerHTML = "addAt - añadir elemento 0 en la posicion 0."; 
+            addAt(miLista,0,0);
             
-            document.getElementById("get").innerHTML = "el elemento 3, resultado de get(): " + get(miLista,3);
+            document.getElementById("get").innerHTML = "get() - el elemento 3, resultado de get(): " + get(miLista,4);
             
             document.getElementById("toString").innerHTML = toString(miLista);
             
