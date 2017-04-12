@@ -15,6 +15,8 @@
         <p id="add"></p>
         <p id="toString"></p>
         <p id="indexOf"></p>
+        <p id="lastIndex"></p>
+        <p id="capacidad"></p>
         
         <script src = "ejercicio1.js"></script>
         <script>
@@ -28,11 +30,21 @@
             document.getElementById("addAt").innerHTML = "addAt - añadir elemento 0 en la posicion 0."; 
             addAt(miLista,0,0);
             
-            document.getElementById("get").innerHTML = "get() - el elemento 3, resultado de get(): " + get(miLista,4);
+            document.getElementById("get").innerHTML = "get() - el elemento 4, resultado de get(): " + get(miLista,4);
             
             document.getElementById("toString").innerHTML = toString(miLista);
             
             document.getElementById("indexOf").innerHTML = indexOf(miLista,4);
+            
+            //
+    
+            document.getElementById("lastIndex").innerHTML = lastIndexOf(miLista,0);
+            
+            //
+            
+            
+            document.getElementById("capacidad").innerHTML = "La capacidad de la lista es: " + capacity(miLista);
+            
             
         </script>
 
