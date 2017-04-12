@@ -38,10 +38,28 @@ function add (lista, elemento) {
     
     lista[NUMMAXELEMENTOS++] = elemento;
     
-    
+    return lista.length;
+        
 } 
 
+function addAt (lista, elemento, index) {
+    
+    lista[index] = elemento;
+    
+    return lista.length;
+    
+}
 
+function get (lista, index) {
+    
+    return lista[index];
+    
+}
 
-
-
+function toString (lista) {
+    
+    document.write(lista);
+    
+    
+    
+}
