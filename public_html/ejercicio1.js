@@ -19,12 +19,12 @@ function create(numMaxElementos) {
 
 function  isEmpty(lista) {
 
-    return (lista.length == 0);
+    return (lista.length === 0);
 }
 
 function  isFull (lista) {
     
-    return (lista.length == NUMMAXELEMENTOS);
+    return (lista.length === NUMMAXELEMENTOS);
     
 }
 
@@ -36,7 +36,7 @@ function size (lista) {
 
 function add (lista, elemento) {
     
-    
+    lista[NUMMAXELEMENTOS++] = elemento;
     
     
 } 
