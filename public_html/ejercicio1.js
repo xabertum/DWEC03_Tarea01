@@ -12,54 +12,67 @@ NUMMAXELEMENTOS = 0;
 function create(numMaxElementos) {
 
     NUMMAXELEMENTOS = numMaxElementos;
-    var lista = new Array(numMaxElementos);
+    var lista = new Array();
     return lista;
 }
 
 
 function  isEmpty(lista) {
 
-    return (lista.length === 0);
+    return (lista.length == 0);
 }
 
-function  isFull (lista) {
-    
+function  isFull(lista) {
+
     return (lista.length === NUMMAXELEMENTOS);
-    
+
 }
 
-function size (lista) {
-    
+function size(lista) {
+
     return lista.length;
-    
+
 }
 
-function add (lista, elemento) {
-    
-    lista[NUMMAXELEMENTOS++] = elemento;
-    
-    return lista.length;
-        
-} 
+function add(lista, elemento) {
 
-function addAt (lista, elemento, index) {
-    
+    lista[lista.length] = elemento;
+
+    return lista.length;
+
+}
+
+function addAt(lista, elemento, index) {
+
     lista[index] = elemento;
-    
+
     return lista.length;
-    
+
 }
 
-function get (lista, index) {
-    
+function get(lista, index) {
+
     return lista[index];
-    
+
 }
 
-function toString (lista) {
-    
+function toString(lista) {
+
     document.write(lista);
-    
-    
-    
+
+}
+
+function indexOf(lista, elemento) {
+
+    var index;
+
+    for (var i = 0; lista.length; i++) {
+
+        if (lista[i] === elemento)
+            index = i;
+        else
+            index = -1;
+    }
+
+    return index;
 }
