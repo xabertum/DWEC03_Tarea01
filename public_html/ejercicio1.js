@@ -129,21 +129,18 @@ function remove(lista, index) {
 }
 
 function removeElement(lista, elemento) {
-
-    var bol;
+    var bol = false;
     for (var i = 0; i < lista.length; i++) {
 
-        if (lista[i] == elemento) {
-            lista[i] = []
+        if (lista[i] === elemento) {
+            lista[i] = [];
             bol = true;
-        } else
-            bol = false;
+        }
+
+        return bol;
+
     }
 
-    return bol;
-
 }
-
-
 
 
