@@ -98,7 +98,7 @@ function capacity(lista) {
 
 function clear(lista) {
 
-    lista = [];
+    lista.length = 0;
 
 }
 
@@ -110,7 +110,7 @@ function firstElement(lista) {
 
 function lastElement(lista) {
 
-    return lista[lista.length];
+    return lista[lista.length - 1 ];
 
 }
 
@@ -118,12 +118,29 @@ function remove(lista, index) {
     var elemento;
     for (var i = 0; i < lista.length; i++) {
 
-        if (i == index)
+        if (i === index) {
             lista[i] = elemento;
-        lista[i] = [];
+            lista[i] = [];
+        }
     }
 
     return elemento;
+
+}
+
+function removeElement(lista, elemento) {
+
+    var bol;
+    for (var i = 0; i < lista.length; i++) {
+
+        if (lista[i] == elemento) {
+            lista[i] = []
+            bol = true;
+        } else
+            bol = false;
+    }
+
+    return bol;
 
 }
 
