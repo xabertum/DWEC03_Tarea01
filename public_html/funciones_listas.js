@@ -19,7 +19,7 @@ NUMMAXELEMENTOS = 0;
 function create(numMaxElementos) {
 
     NUMMAXELEMENTOS = numMaxElementos;
-    var lista = new Array(numMaxElementos);
+    var lista = new Array();
     return lista;
 }
 
@@ -79,7 +79,7 @@ function add(lista, elemento) {
     elemento = parseInt(elemento);
 
     if (isNaN(elemento)) {
-        throw "El elemento no es number"
+        throw "El elemento no es number";
     }
 
     if (!isFull(lista)) {    
@@ -103,13 +103,13 @@ function add(lista, elemento) {
 function addAt(lista, elemento, index) {
     elemento = parseInt(elemento);
     if (isNaN(elemento)) {
-        throw "El elemento no es un number"
+        throw "El elemento no es un number";
     }
 
     if (!isFull(lista)) {
         lista[index] = elemento;
     } else {
-        throw "La lista esta llena.. "
+        throw "La lista esta llena.. ";
     }
     return lista.length;
 
