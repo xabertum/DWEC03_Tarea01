@@ -42,18 +42,10 @@
             addAt(miLista,0,0);
             
             document.getElementById("get").innerHTML = "get() - el elemento 4, resultado de get(): " + get(miLista,4);
-            
-            document.getElementById("toString").innerHTML = toString(miLista);
-            
-            document.getElementById("indexOf").innerHTML = indexOf(miLista,4);
-            
-            //
-    
-            document.getElementById("lastIndex").innerHTML = lastIndexOf(miLista,0);
-            
-            //
-            
-            
+            document.getElementById("toString").innerHTML = "Funcion toString: " +  toString(miLista);
+            document.getElementById("indexOf").innerHTML = "Index del elemento 4: " + indexOf(miLista,4);
+            document.getElementById("lastIndex").innerHTML = "Index del elemento 45: " + lastIndexOf(miLista,45);
+                       
             document.getElementById("capacidad").innerHTML = "La capacidad de la lista es: " + capacity(miLista);
             document.getElementById("clear").innerHTML = "Se borra la lista.";
             clear(miLista);
