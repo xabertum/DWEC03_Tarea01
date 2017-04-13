@@ -25,6 +25,8 @@
         <p id="lastElement"></p>
         <p id="remove"></p>
         <p id="toStringAfterRemove"></p>
+        <p id="removeElement"></p>
+        <p id="afterRemoveElement"></p>
         
         
         <script src = "ejercicio1.js"></script>
@@ -71,7 +73,8 @@
             remove(miLista,1);
             document.getElementById("toStringAfterRemove").innerHTML = "Lista actualizada: " + toString(miLista);
             
-            
+            removeElement(miLista,0);
+            document.getElementById("afterRemoveElement").innerHTML = "Lista sin el elemento borrado: " + toString(miLista);
             
             
             
