@@ -9,6 +9,13 @@ document.title = "Hola";
 
 NUMMAXELEMENTOS = 0;
 
+
+/**
+ * Crea una lista con el array ya instanciado con el numero de elementos maximos. 
+ * 
+ * @param {type} numMaxElementos
+ * @returns {Array}
+ */
 function create(numMaxElementos) {
 
     NUMMAXELEMENTOS = numMaxElementos;
@@ -17,10 +24,26 @@ function create(numMaxElementos) {
 }
 
 
+/**
+ * 
+ * Devuelve el numero de elementos de la lista. 
+ * 
+ * @param {type} lista
+ * @returns {Boolean}
+ */
+
 function  isEmpty(lista) {
 
     return (lista.length == 0);
 }
+
+/**
+ * 
+ * Devuelve true o false en función de si la lista está llena. 
+ * 
+ * @param {type} lista
+ * @returns {Boolean}
+ */
 
 function  isFull(lista) {
 
@@ -28,11 +51,29 @@ function  isFull(lista) {
 
 }
 
+
+/**
+ * 
+ * Devuelve el numero de elementos de la lista. 
+ * 
+ * @param {type} lista
+ * @returns {unresolved}
+ */
 function size(lista) {
 
     return lista.length;
 
 }
+
+/**
+ * 
+ * Añade un nuevo elemento al final de la lista. Devuelve el tamaño de la lista
+ * una vez añadido. 
+ * 
+ * @param {type} lista
+ * @param {type} elemento
+ * @returns {unresolved}
+ */
 
 function add(lista, elemento) {
 
@@ -42,6 +83,15 @@ function add(lista, elemento) {
 
 }
 
+/**
+ * Añade un nuevo elemento en la posición especificada en la lista. Devuelve el 
+ * tamaño de la lista una vez añadido. 
+ * 
+ * @param {type} lista
+ * @param {type} elemento
+ * @param {type} index
+ * @returns {unresolved}
+ */
 function addAt(lista, elemento, index) {
 
     lista[index] = elemento;
@@ -50,11 +100,27 @@ function addAt(lista, elemento, index) {
 
 }
 
+
+/**
+ * Devuelve el elelemtno de la lista de la posición indicada. 
+ * 
+ * @param {type} lista
+ * @param {type} index
+ * @returns {get.lista}
+ */
 function get(lista, index) {
 
     return lista[index];
 
 }
+
+/**
+ * 
+ * Devuelve la cola en formato cadena. 
+ * 
+ * @param {type} lista
+ * @returns {unresolved}
+ */
 
 function toString(lista) {
 
@@ -62,6 +128,14 @@ function toString(lista) {
 
 }
 
+/**
+ * Devuelve la posición del elemento indicado. Si el elemento no está en la lista
+ * devuelve -1. 
+ *  
+ * @param {type} lista
+ * @param {type} elemento
+ * @returns {Number}
+ */
 function indexOf(lista, elemento) {
     var index;
     for (var i = 0; i < lista.length; i++) {
@@ -74,6 +148,16 @@ function indexOf(lista, elemento) {
 
     return index;
 }
+
+/**
+ * 
+ * Devuelve la posicion del elemento indicado comenzando por el final. Si no está
+ * en la lista devuelve -1. 
+ * 
+ * @param {type} lista
+ * @param {type} elemento
+ * @returns {Number}
+ */
 
 function lastIndexOf(lista, elemento) {
     var index;
@@ -89,6 +173,13 @@ function lastIndexOf(lista, elemento) {
 
 }
 
+
+/**
+ * Devuelve el numero máximo de elementos que podemos tener en la lista. 
+ * 
+ * @param {type} lista
+ * @returns {Number|NUMMAXELEMENTOS|numMaxElementos}
+ */
 function capacity(lista) {
 
     return NUMMAXELEMENTOS;
@@ -96,24 +187,54 @@ function capacity(lista) {
 
 }
 
+/**
+ * Vacia la lista.
+ *  
+ * @param {type} lista
+ * @returns {undefined}
+ */
+
 function clear(lista) {
 
     lista.length = 0;
 
 }
 
+
+/**
+ * Devuelve el primer elemento de la lista. 
+ * 
+ * @param {type} lista
+ * @returns {firstElement.lista}
+ */
 function firstElement(lista) {
 
     return lista[0];
 
 }
 
+
+/**
+ * Devuelve el ultimo elemento de la lista. 
+ *  
+ * @param {type} lista
+ * @returns {lastElement.lista}
+ */
 function lastElement(lista) {
 
     return lista[lista.length - 1 ];
 
 }
 
+
+/**
+ * Elimina el elemento de la posición
+ * indicada. Devuelve el elemento borrado.
+ * 
+ * @param {type} lista
+ * @param {type} index
+ * @returns {unresolved}
+ */
 function remove(lista, index) {
     var elemento;
     for (var i = 0; i < lista.length; i++) {
@@ -127,7 +248,14 @@ function remove(lista, index) {
     return elemento;
 
 }
-
+/**
+ * Elimina el elemento indicado de la lista. Devuelve true si se ha podido borarr
+ * el elemento, false en caso contrario. 
+ * 
+ * @param {type} lista
+ * @param {type} elemento
+ * @returns {Boolean}
+ */
 function removeElement(lista, elemento) {
     var bol = false;
     for (var i = 0; i < lista.length; i++) {
@@ -141,6 +269,23 @@ function removeElement(lista, elemento) {
 
     }
 
+}
+
+/**
+ * Reemplaza el elemento de la lista indicado por el indice. Devuelve el elemento
+ * que estaba anteriormente en la lista. 
+ * 
+ * @param {type} lista
+ * @param {type} index
+ * @param {type} elemento
+ * @returns {set.lista}
+ */
+function set (lista, index, elemento) {
+
+    var aux = lista[index];
+    lista[index] = elemento;
+     
+    return aux;
 }
 
 
