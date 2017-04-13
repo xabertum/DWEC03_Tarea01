@@ -34,7 +34,7 @@ function create(numMaxElementos) {
 
 function  isEmpty(lista) {
 
-    return (lista.length == 0);
+    return (lista.length === 0);
 }
 
 /**
@@ -76,9 +76,17 @@ function size(lista) {
  */
 
 function add(lista, elemento) {
+    elemento = parseInt(elemento);
 
-    lista[lista.length] = elemento;
+    if (isNaN(elemento)) {
+        throw "El elemento no es number"
+    }
 
+    if (!isFull(lista)) {    
+        lista[lista.length] = elemento;
+    } else {
+        throw "La lista está llena..";
+    }
     return lista.length;
 
 }
@@ -93,9 +101,16 @@ function add(lista, elemento) {
  * @returns {unresolved}
  */
 function addAt(lista, elemento, index) {
+    elemento = parseInt(elemento);
+    if (isNaN(elemento)) {
+        throw "El elemento no es un number"
+    }
 
-    lista[index] = elemento;
-
+    if (!isFull(lista)) {
+        lista[index] = elemento;
+    } else {
+        throw "La lista esta llena.. "
+    }
     return lista.length;
 
 }
@@ -111,7 +126,6 @@ function addAt(lista, elemento, index) {
 function get(lista, index) {
 
     return lista[index];
-
 }
 
 /**
@@ -125,7 +139,6 @@ function get(lista, index) {
 function toString(lista) {
 
     return lista;
-
 }
 
 /**
@@ -145,7 +158,6 @@ function indexOf(lista, elemento) {
         else
             index = -1;
     }
-
     return index;
 }
 
@@ -168,9 +180,7 @@ function lastIndexOf(lista, elemento) {
         else
             index = -1;
     }
-
     return index;
-
 }
 
 
@@ -183,8 +193,6 @@ function lastIndexOf(lista, elemento) {
 function capacity(lista) {
 
     return NUMMAXELEMENTOS;
-
-
 }
 
 /**
@@ -196,10 +204,9 @@ function capacity(lista) {
 
 function clear(lista) {
 
-    lista.length = 0;
-
+    if (!isEmpty(lista))
+        lista.length = 0;
 }
-
 
 /**
  * Devuelve el primer elemento de la lista. 
@@ -210,9 +217,7 @@ function clear(lista) {
 function firstElement(lista) {
 
     return lista[0];
-
 }
-
 
 /**
  * Devuelve el ultimo elemento de la lista. 
@@ -225,7 +230,6 @@ function lastElement(lista) {
     return lista[lista.length - 1 ];
 
 }
-
 
 /**
  * Elimina el elemento de la posición
@@ -246,8 +250,8 @@ function remove(lista, index) {
     }
 
     return elemento;
-
 }
+
 /**
  * Elimina el elemento indicado de la lista. Devuelve true si se ha podido borarr
  * el elemento, false en caso contrario. 
@@ -280,11 +284,11 @@ function removeElement(lista, elemento) {
  * @param {type} elemento
  * @returns {set.lista}
  */
-function set (lista, index, elemento) {
+function set(lista, index, elemento) {
 
     var aux = lista[index];
     lista[index] = elemento;
-     
+
     return aux;
 }
 
