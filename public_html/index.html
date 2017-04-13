@@ -17,6 +17,15 @@
         <p id="indexOf"></p>
         <p id="lastIndex"></p>
         <p id="capacidad"></p>
+        <p id="clear"></p>
+        <p id="afterClear"></p>
+        <p id="coment"></p>
+        <p id="toStringAfterClear"></p>
+        <p id="firstElement"></p>
+        <p id="lastElement"></p>
+        <p id="remove"></p>
+        <p id="toStringAfterRemove"></p>
+        
         
         <script src = "ejercicio1.js"></script>
         <script>
@@ -44,6 +53,26 @@
             
             
             document.getElementById("capacidad").innerHTML = "La capacidad de la lista es: " + capacity(miLista);
+            document.getElementById("clear").innerHTML = "Se borra la lista.";
+            clear(miLista);
+            //document.getElementById("afterClear").innerHTML = toString(miLista);
+            document.getElementById("coment").innerHTML = "Se vuelve a rellenar solo con propositos ilustrativos";
+            
+            add(miLista,0);
+            add(miLista,1);
+            add(miLista,2);
+            add(miLista,3);
+            add(miLista,4);
+            
+            document.getElementById("toStringAfterClear").innerHTML = "Lista llena: " + toString(miLista);
+            document.getElementById("firstElement").innerHTML = "Primer elemento: " + firstElement(miLista);
+            document.getElementById("lastElement").innerHTML = "Ultimo elemento: " + lastElement(miLista);
+            document.getElementById("remove").innerHTML = "Eliminado el elemento 1: ";
+            remove(miLista,1);
+            document.getElementById("toStringAfterRemove").innerHTML = "Lista actualizada: " + toString(miLista);
+            
+            
+            
             
             
         </script>
