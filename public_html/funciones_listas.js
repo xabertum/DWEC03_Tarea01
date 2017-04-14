@@ -115,7 +115,7 @@ function addAt(lista, elemento, index) {
     if (index > NUMMAXELEMENTOS) {
         throw "index fuera de los limites de la lista";
     }
-    
+
     return lista.length;
 
 }
@@ -129,6 +129,10 @@ function addAt(lista, elemento, index) {
  * @returns {get.lista}
  */
 function get(lista, index) {
+
+    if (index > NUMMAXELEMENTOS) {
+        throw "index fuera de los limites de la lista"
+    }
 
     return lista[index];
 }
