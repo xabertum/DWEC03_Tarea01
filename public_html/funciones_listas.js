@@ -160,12 +160,18 @@ function toString(lista) {
  */
 function indexOf(lista, elemento) {
     var index;
-    for (var i = 0; i < lista.length; i++) {
 
-        if (lista[i] === elemento)
-            index = i;
-        else
-            index = -1;
+    if (isNaN(elemento)) {
+        throw "El elemento no es un number";
+
+    } else {
+        for (var i = 0; i < lista.length; i++) {
+
+            if (lista[i] === elemento)
+                index = i;
+            else
+                index = -1;
+        }
     }
     return index;
 }
@@ -182,12 +188,18 @@ function indexOf(lista, elemento) {
 
 function lastIndexOf(lista, elemento) {
     var index;
-    for (var i = lista.length + 1; i >= 0; i--) {
 
-        if (lista[i] === elemento)
-            index = i;
-        else
-            index = -1;
+    if (isNaN(elemento)) {
+        throw "El elemento no es un number";
+
+    } else {
+        for (var i = lista.length + 1; i >= 0; i--) {
+
+            if (lista[i] === elemento)
+                index = i;
+            else
+                index = -1;
+        }
     }
     return index;
 }
@@ -225,6 +237,10 @@ function clear(lista) {
  */
 function firstElement(lista) {
 
+    if (isEmpty(lista)) {
+        throw "La lista está vacia";
+    }
+
     return lista[0];
 }
 
@@ -235,6 +251,10 @@ function firstElement(lista) {
  * @returns {lastElement.lista}
  */
 function lastElement(lista) {
+
+    if (isEmpty(lista)) {
+        throw "La lista está vacia";
+    }
 
     return lista[lista.length - 1 ];
 
@@ -250,14 +270,18 @@ function lastElement(lista) {
  */
 function remove(lista, index) {
     var elemento;
-    for (var i = 0; i < lista.length; i++) {
 
-        if (i === index) {
-            lista[i] = elemento;
-            lista[i] = [];
+    if (index > NUMMAXELEMENTOS) {
+        throw "El index esta fuera de los limites de la lilsta";
+    } else {
+        for (var i = 0; i < lista.length; i++) {
+
+            if (i === index) {
+                lista[i] = elemento;
+                lista[i] = [];
+            }
         }
     }
-
     return elemento;
 }
 
@@ -271,17 +295,20 @@ function remove(lista, index) {
  */
 function removeElement(lista, elemento) {
     var bol = false;
-    for (var i = 0; i < lista.length; i++) {
 
-        if (lista[i] === elemento) {
-            lista[i] = [];
-            bol = true;
+    if (isNaN(elemento)) {
+        throw "El elemento no es un number";
+    } else {
+
+        for (var i = 0; i < lista.length; i++) {
+
+            if (lista[i] === elemento) {
+                lista[i] = [];
+                bol = true;
+            }
         }
-
-        return bol;
-
     }
-
+    return bol;
 }
 
 /**
@@ -295,9 +322,15 @@ function removeElement(lista, elemento) {
  */
 function set(lista, index, elemento) {
 
-    var aux = lista[index];
-    lista[index] = elemento;
+    if (isNaN(elemento)) {
+        throw "El elemento no es un number";
+    } else if (index > NUMMAXELEMENTOS) {
+        throw "El index est fuera de los limites de la lista";
+    } else {
 
+        var aux = lista[index];
+        lista[index] = elemento;
+    }
     return aux;
 }
 
