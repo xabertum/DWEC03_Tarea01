@@ -112,7 +112,7 @@ function addAt(lista, elemento, index) {
         throw "La lista esta llena.. ";
     }
 
-    if (index > lista.length - 1) {
+    if (index > NUMMAXELEMENTOS) {
         throw "index fuera de los limites de la lista";
     }
     
