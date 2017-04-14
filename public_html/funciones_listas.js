@@ -82,7 +82,7 @@ function add(lista, elemento) {
         throw "El elemento no es number";
     }
 
-    if (!isFull(lista)) {    
+    if (!isFull(lista)) {
         lista[lista.length] = elemento;
     } else {
         throw "La lista está llena..";
@@ -111,6 +111,11 @@ function addAt(lista, elemento, index) {
     } else {
         throw "La lista esta llena.. ";
     }
+
+    if (index > lista.length - 1) {
+        throw "index fuera de los limites de la lista";
+    }
+    
     return lista.length;
 
 }
