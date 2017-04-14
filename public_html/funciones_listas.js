@@ -5,7 +5,7 @@
  */
 
 
-document.title = "Hola";
+document.title = "Tarea03 - Ejercicio 1";
 
 NUMMAXELEMENTOS = 0;
 
